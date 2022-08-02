@@ -159,6 +159,9 @@ export STUDY='/usr/local/var/www/study'
 export PRIV='/usr/local/var/www/private'
 export LIB='/usr/local/var/www/library'
 export VOLUMES='/Users/Shared/Docker/Volumes'
+export CODE_WORKSPACE="$HOME/Documents/Workspaces/VSCode"
+export VSC_WORKSPACE="$HOME/Documents/Workspaces/VSCode"
+export VSCODE_WORKSPACE="$HOME/Documents/Workspaces/VSCode"
 
 ##=========
 ## Aliases
@@ -238,6 +241,9 @@ alias study='cd /usr/local/var/www/study'
 alias priv='cd /usr/local/var/www/private'
 alias lib='cd /usr/local/var/www/library'
 alias volumes='cd /Users/Shared/Docker/Volumes'
+alias code-workspace="cd $HOME/Documents/Workspaces/VSCode"
+alias vsc-workspace="cd $HOME/Documents/Workspaces/VSCode"
+alias vscode-workspace="cd $HOME/Documents/Workspaces/VSCode"
 
 ## Custom scripts: pidkill
 alias pidkill="php $HOME/Scripts/Port/killPID.php"

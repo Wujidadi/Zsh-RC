@@ -110,7 +110,7 @@ unsetopt SHARE_HISTORY
 ##=======================
 
 ## User Home
-export USER_HOME='/Users/wujidadi'
+export USER_HOME='/Users/taras'
 
 ## Basic
 export PATH="/usr/local/sbin:$PATH"
@@ -121,32 +121,32 @@ export TIME_STYLE='+%Y-%m-%d %H:%M:%S'
 export PATH="$USER_HOME/.composer/vendor/bin:$PATH"
 
 ## Java
-export JAVA_HOME="$(/usr/libexec/java_home)"
+# export JAVA_HOME="$(/usr/libexec/java_home)"
 
 ## Android
-export ANDROID_HOME="$HOME/Library/Android/sdk"
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+# export ANDROID_HOME="$HOME/Library/Android/sdk"
+# export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 
 ## Flutter
-export PATH="$PATH:/Users/Shared/Flutter/bin"
+# export PATH="$PATH:/Users/Shared/Flutter/bin"
 
 ## Node.js & npm
-export NODE_PATH='/usr/local/lib/node_modules'
+# export NODE_PATH='/usr/local/lib/node_modules'
 
 ## pip
-export PATH="$PATH:$USER_HOME/Library/Python/2.7/bin"
+# export PATH="$PATH:$USER_HOME/Library/Python/2.7/bin"
 
 ## Ruby
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-export PATH="/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
-export LDFLAGS='-L/usr/local/opt/ruby/lib'
-export CPPFLAGS='-I/usr/local/opt/ruby/include'
+# export PATH="/usr/local/opt/ruby/bin:$PATH"
+# export PATH="/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
+# export LDFLAGS='-L/usr/local/opt/ruby/lib'
+# export CPPFLAGS='-I/usr/local/opt/ruby/include'
 
 ## OpenSSL
-export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
-export LDFLAGS="$LDFLAGS -L/usr/local/opt/openssl@1.1/lib"
-export CPPFLAGS="$CPPFLAGS -I/usr/local/opt/openssl@1.1/include"
-export PKG_CONFIG_PATH='/usr/local/opt/openssl@1.1/lib/pkgconfig'
+# export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+# export LDFLAGS="$LDFLAGS -L/usr/local/opt/openssl@1.1/lib"
+# export CPPFLAGS="$CPPFLAGS -I/usr/local/opt/openssl@1.1/include"
+# export PKG_CONFIG_PATH='/usr/local/opt/openssl@1.1/lib/pkgconfig'
 
 ## Custom paths
 export DSK="$USER_HOME/Desktop"
@@ -156,11 +156,11 @@ export CLOUD="$USER_HOME/Library/Mobile Documents/com~apple~CloudDocs"
 export RIMED="$USER_HOME/Library/Rime"
 export WORKSPACE="$USER_HOME/Documents/Workspaces"
 export WORKSPACES="$USER_HOME/Documents/Workspaces"
-export WWW='/usr/local/var/www'
-export WORK='/usr/local/var/www/work'
-export STUDY='/usr/local/var/www/study'
-export PRIV='/usr/local/var/www/private'
-export LIB='/usr/local/var/www/library'
+# export WWW='/usr/local/var/www'
+# export WORK='/usr/local/var/www/work'
+# export STUDY='/usr/local/var/www/study'
+# export PRIV='/usr/local/var/www/private'
+# export LIB='/usr/local/var/www/library'
 export VOLUMES='/Users/Shared/Docker/Volumes'
 export CODE_WORKSPACE="$USER_HOME/Documents/Workspaces/VSCode"
 export VSC_WORKSPACE="$USER_HOME/Documents/Workspaces/VSCode"
@@ -202,11 +202,11 @@ alias cls='clear'
 alias exp='expect'
 
 ## Python
-# alias python='python3'
+alias python='python3'
 alias py='python3'
-alias py2='python'
+# alias py2='python'
 alias py3='python3'
-# alias pip='pip3'
+alias pip='pip3'
 
 ## Git (not overlap ~/.oh-my-zsh/plugins/git/git.plugin.zsh)
 alias ga.='git add .'
@@ -238,11 +238,11 @@ alias cloud="cd '$USER_HOME/Library/Mobile Documents/com~apple~CloudDocs'"
 alias rimed="cd $USER_HOME/Library/Rime"
 alias workspace="cd $USER_HOME/Documents/Workspaces"
 alias workspaces="cd $USER_HOME/Documents/Workspaces"
-alias www='cd /usr/local/var/www'
-alias work='cd /usr/local/var/www/work'
-alias study='cd /usr/local/var/www/study'
-alias priv='cd /usr/local/var/www/private'
-alias lib='cd /usr/local/var/www/library'
+# alias www='cd /usr/local/var/www'
+# alias work='cd /usr/local/var/www/work'
+# alias study='cd /usr/local/var/www/study'
+# alias priv='cd /usr/local/var/www/private'
+# alias lib='cd /usr/local/var/www/library'
 alias volumes='cd /Users/Shared/Docker/Volumes'
 alias code-workspace="cd $USER_HOME/Documents/Workspaces/VSCode"
 alias vsc-workspace="cd $USER_HOME/Documents/Workspaces/VSCode"
