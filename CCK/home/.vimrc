@@ -1,9 +1,8 @@
 " Configuration file for vim
 " set modelines=0    " CVE-2007-2438
 
-" Normally we use vim-extensions. If you want true vi-compatibility
-" remove change the following statements
-au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif    " Remember last position
+" Normally we use vim-extensions. If you want true vi-compatibility remove change the following statements
+autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif    " Remember last position
 
 autocmd InsertEnter * se cul          " Highlight current line
 autocmd InsertLeave * se nocul
