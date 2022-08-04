@@ -105,6 +105,10 @@ source $ZSH/oh-my-zsh.sh
 unsetopt INC_APPEND_HISTORY
 unsetopt SHARE_HISTORY
 
+setopt PROMPT_CR
+setopt PROMPT_SP
+export PROMPT_EOL_MARK=""
+
 ##=======================
 ## Environment Variables
 ##=======================

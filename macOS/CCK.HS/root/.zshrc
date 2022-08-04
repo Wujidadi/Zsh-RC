@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME='myzshtheme'
+ZSH_THEME='myrootzshtheme'
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -105,9 +105,16 @@ source $ZSH/oh-my-zsh.sh
 unsetopt INC_APPEND_HISTORY
 unsetopt SHARE_HISTORY
 
+setopt PROMPT_CR
+setopt PROMPT_SP
+export PROMPT_EOL_MARK=""
+
 ##=======================
 ## Environment Variables
 ##=======================
+
+## User Home
+export USER_HOME='/Users/taras'
 
 ## Basic
 export PATH="/usr/local/sbin:$PATH"
@@ -115,7 +122,7 @@ export LS_OPTIONS='--color=auto'
 export TIME_STYLE='+%Y-%m-%d %H:%M:%S'
 
 ## Composer
-export PATH="$HOME/.composer/vendor/bin:$PATH"
+export PATH="$USER_HOME/.composer/vendor/bin:$PATH"
 
 ## Java
 # export JAVA_HOME="$(/usr/libexec/java_home)"
@@ -131,7 +138,7 @@ export PATH="$HOME/.composer/vendor/bin:$PATH"
 # export NODE_PATH='/usr/local/lib/node_modules'
 
 ## pip
-# export PATH="$PATH:$HOME/Library/Python/2.7/bin"
+# export PATH="$PATH:$USER_HOME/Library/Python/2.7/bin"
 
 ## Ruby
 # export PATH="/usr/local/opt/ruby/bin:$PATH"
@@ -146,22 +153,22 @@ export PATH="$HOME/.composer/vendor/bin:$PATH"
 # export PKG_CONFIG_PATH='/usr/local/opt/openssl@1.1/lib/pkgconfig'
 
 ## Custom paths
-export DSK="$HOME/Desktop"
-export D="$HOME/Downloads"
-export SCRIPTS="$HOME/Scripts"
-export CLOUD="$HOME/Library/Mobile Documents/com~apple~CloudDocs"
-export RIMED="$HOME/Library/Rime"
-export WORKSPACE="$HOME/Documents/Workspaces"
-export WORKSPACES="$HOME/Documents/Workspaces"
+export DSK="$USER_HOME/Desktop"
+export D="$USER_HOME/Downloads"
+export SCRIPTS="$USER_HOME/Scripts"
+export CLOUD="$USER_HOME/Library/Mobile Documents/com~apple~CloudDocs"
+export RIMED="$USER_HOME/Library/Rime"
+export WORKSPACE="$USER_HOME/Documents/Workspaces"
+export WORKSPACES="$USER_HOME/Documents/Workspaces"
 # export WWW='/usr/local/var/www'
 # export WORK='/usr/local/var/www/work'
 # export STUDY='/usr/local/var/www/study'
 # export PRIV='/usr/local/var/www/private'
 # export LIB='/usr/local/var/www/library'
 export VOLUMES='/Users/Shared/Docker/Volumes'
-export CODE_WORKSPACE="$HOME/Documents/Workspaces/VSCode"
-export VSC_WORKSPACE="$HOME/Documents/Workspaces/VSCode"
-export VSCODE_WORKSPACE="$HOME/Documents/Workspaces/VSCode"
+export CODE_WORKSPACE="$USER_HOME/Documents/Workspaces/VSCode"
+export VSC_WORKSPACE="$USER_HOME/Documents/Workspaces/VSCode"
+export VSCODE_WORKSPACE="$USER_HOME/Documents/Workspaces/VSCode"
 
 ##=========
 ## Aliases
@@ -178,7 +185,7 @@ alias gls='gls -ahl --color --group-directories-first'
 ## find
 alias chd="find . -type d -exec chmod 755 '{}' \\;"
 alias chf="find . -type f -exec chmod 644 '{}' \\;"
-alias findname="php $HOME/Scripts/Find/findname.php"
+alias findname="php $USER_HOME/Scripts/Find/findname.php"
 
 ## Kill .DS_Store files under current directory
 alias kds='rm .DS_Store'
@@ -228,38 +235,38 @@ alias code='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/co
 alias vsc='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
 
 ## Custom paths
-alias dsk="cd $HOME/Desktop"
-alias d="cd $HOME/Downloads"
-alias scripts="cd $HOME/Scripts"
-alias cloud="cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs"
-alias rimed="cd $HOME/Library/Rime"
-alias workspace="cd $HOME/Documents/Workspaces"
-alias workspaces="cd $HOME/Documents/Workspaces"
+alias dsk="cd $USER_HOME/Desktop"
+alias d="cd $USER_HOME/Downloads"
+alias scripts="cd $USER_HOME/Scripts"
+alias cloud="cd '$USER_HOME/Library/Mobile Documents/com~apple~CloudDocs'"
+alias rimed="cd $USER_HOME/Library/Rime"
+alias workspace="cd $USER_HOME/Documents/Workspaces"
+alias workspaces="cd $USER_HOME/Documents/Workspaces"
 # alias www='cd /usr/local/var/www'
 # alias work='cd /usr/local/var/www/work'
 # alias study='cd /usr/local/var/www/study'
 # alias priv='cd /usr/local/var/www/private'
 # alias lib='cd /usr/local/var/www/library'
 alias volumes='cd /Users/Shared/Docker/Volumes'
-alias code-workspace="cd $HOME/Documents/Workspaces/VSCode"
-alias vsc-workspace="cd $HOME/Documents/Workspaces/VSCode"
-alias vscode-workspace="cd $HOME/Documents/Workspaces/VSCode"
+alias code-workspace="cd $USER_HOME/Documents/Workspaces/VSCode"
+alias vsc-workspace="cd $USER_HOME/Documents/Workspaces/VSCode"
+alias vscode-workspace="cd $USER_HOME/Documents/Workspaces/VSCode"
 
 ## Custom scripts: pidkill
-alias pidkill="php $HOME/Scripts/Port/killPID.php"
-alias st_pidkill="st $HOME/Scripts/Port/killPID.php"
+alias pidkill="php $USER_HOME/Scripts/Port/killPID.php"
+alias st_pidkill="st $USER_HOME/Scripts/Port/killPID.php"
 
 ## Custom scripts: Edit the roads (ssh.sh)
-alias st_roads="st $HOME/Scripts/SSH/ssh.sh"
+alias st_roads="st $USER_HOME/Scripts/SSH/ssh.sh"
 
 ## Custom scripts: xattr
-alias xattr-list="php $HOME/Scripts/xattr/xattr-list.php"
-alias xattr-delete="php $HOME/Scripts/xattr/xattr-delete.php"
+alias xattr-list="php $USER_HOME/Scripts/xattr/xattr-list.php"
+alias xattr-delete="php $USER_HOME/Scripts/xattr/xattr-delete.php"
 
 ## Custom scripts: JSON format
-alias json_format="php $HOME/Scripts/JSON/json_format.php"
+alias json_format="php $USER_HOME/Scripts/JSON/json_format.php"
 
 ## Custom actions: Edit the dict and userdb of Rime Terra Pinyin
 ## Note: ln -s the userdb.txt file first
-alias userdb="vim -c \"set tabstop=80\" $HOME/Library/Rime/terra_pinyin.userdb.txt"
-alias dict="vim -c \"set tabstop=80\" $HOME/Library/Rime/terra_pinyin.dict.yaml"
+alias userdb="vim -c \"set tabstop=80\" $USER_HOME/Library/Rime/terra_pinyin.userdb.txt"
+alias dict="vim -c \"set tabstop=80\" $USER_HOME/Library/Rime/terra_pinyin.dict.yaml"
