@@ -4,6 +4,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+[[ "$TERM" == "xterm" ]] && export TERM=xterm-256color
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -121,11 +123,19 @@ export PATH="/usr/local/sbin:$PATH"
 export LS_OPTIONS='--color=auto'
 export TIME_STYLE='+%Y-%m-%d %H:%M:%S'
 
+## Homebrew
+# export PATH="/opt/homebrew/bin:$PATH"
+
+## PHP
+export PHP_CS_FIXER_IGNORE_ENV=1
+
 ## Composer
 export PATH="$USER_HOME/.composer/vendor/bin:$PATH"
 
 ## Java
-# export JAVA_HOME="$(/usr/libexec/java_home)"
+export JAVA_HOME=/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
 
 ## Android
 # export ANDROID_HOME="$HOME/Library/Android/sdk"
@@ -134,8 +144,13 @@ export PATH="$USER_HOME/.composer/vendor/bin:$PATH"
 ## Flutter
 # export PATH="$PATH:/Users/Shared/Flutter/bin"
 
+## MySQL
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/mysql-client/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/mysql-client/include"
+
 ## Node.js & npm
-# export NODE_PATH='/usr/local/lib/node_modules'
+export NODE_PATH='/opt/homebrew/lib/node_modules'
 
 ## pip
 # export PATH="$PATH:$USER_HOME/Library/Python/2.7/bin"
@@ -216,11 +231,19 @@ alias pip='pip3'
 alias ga.='git add .'
 alias gcaem='git commit --allow-empty-message'
 alias gcaemm='git commit --allow-empty-message -m ""'
+alias gcane='git commit --amend --no-edit'
 alias glor='git pull origin'
 alias gla='git log --all'
+alias gcof='git checkout --force'
+alias gsuir='git submodule update --init --recursive'
+alias gsuirr='git submodule update --init --recursive --remote'
 
 ## Node.js & npm
-alias node-path='cd /usr/local/lib/node_modules'
+alias node-path='cd /opt/homebrew/lib/node_modules'
+
+## Rime
+alias Squirrel='/Library/Input\ Methods/Squirrel.app/Contents/MacOS/Squirrel'
+alias squirrel='Squirrel'
 
 ## Sass
 alias sassc='sass --charset --no-source-map'
@@ -270,3 +293,23 @@ alias json_format="php $USER_HOME/Scripts/JSON/json_format.php"
 ## Note: ln -s the userdb.txt file first
 alias userdb="vim -c \"set tabstop=80\" $USER_HOME/Library/Rime/terra_pinyin.userdb.txt"
 alias dict="vim -c \"set tabstop=80\" $USER_HOME/Library/Rime/terra_pinyin.dict.yaml"
+alias RimeDeploy="dos2unix $D/terra_pinyin.dict.yaml; mv $D/terra_pinyin.dict.yaml $RIMED/terra_pinyin.dict.yaml; squirrel --reload"
+alias RimeSync="dos2unix $D/terra_pinyin.userdb.txt; mv $D/terra_pinyin.userdb.txt $RIMED/sync/rime-wujidadi/terra_pinyin.userdb.txt; squirrel --sync"
+alias RimeSyncRm="dos2unix $D/terra_pinyin.userdb.txt; rm -rf $RIMED/terra_pinyin.userdb; mv $D/terra_pinyin.userdb.txt $RIMED/sync/rime-wujidadi/terra_pinyin.userdb.txt; mkdir $RIMED/terra_pinyin.userdb; squirrel --sync"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/homebrew/anaconda3/bin/conda' 'shell.zsh' 'hook' 2>/dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/homebrew/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/homebrew/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/homebrew/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
